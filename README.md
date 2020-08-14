@@ -1,4 +1,5 @@
 # posc
+run => composer install
 
 Akun User (2 roles)
 ===================
