@@ -6,13 +6,15 @@ use \Firebase\JWT\JWT;
 class MY_Controller extends CI_Controller {
 
     private $_token = null;
-    private $_secret_key = 'POSC_KEY';
+    private $_secret_key;
     
     public function __construct()
     {
         parent::__construct();
         date_default_timezone_set('Asia/Jakarta');
+        $this->_secret_key = $_ENV['SECRET_KEY'];
         $this->load->model('model_auth');
+
     }
 
     public function authentication()
